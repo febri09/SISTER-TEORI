@@ -1,0 +1,26 @@
+Program StaticHuffmanCompression merupakan implementasi sederhana dari algoritma kompresi statis Huffman. 
+Algoritma Huffman merupakan algoritma yang digunakan untuk mengelompokkan data dengan cara mengurangi panjang representasi karakter yang sering muncul pada data. 
+Berikut penjelasan singkat programnya:
+1. Import Library:
+- Program ini mengimpor kelas yang diperlukan dari perpustakaan Java, seperti `java.util.HashMap`, `java.util.Map` dan `java.util.PriorityQueue`. 
+2. Kelas StaticHuffmanCompression:
+- Merupakan kelas dasar dengan metode untuk menghasilkan kode Huffman statis, melakukan kompresi dan dekompresi. 
+3. `buildHuffmanCodes(String text):
+- Metode ini digunakan untuk membuat peta dengan karakter teks dan kode Huffman yang sesuai. 
+  Pertama, program menghitung frekuensi setiap huruf dalam teks. 
+  Kemudian membangun pohon Huffman berdasarkan frekuensi karakter yang dikelompokkan. 
+  Terakhir, metode 'buildHuffmanCodesRecursive' digunakan untuk menghasilkan kode Huffman untuk setiap karakter.
+4. `buildHuffmanCodesRecursive(HuffmanNode node, String code, Map<Character, String> huffmanCodes):
+- Ini adalah teknik decoding yang menghasilkan kode Huffman untuk setiap karakter berdasarkan pohon Huffman yang dibangun. 
+  Kode Huffman dibuat dengan menambahkan "0" saat ke kiri di pohon dan "1" saat ke kanan. 
+5. `compress(String text, Map<Character, String> huffmanCodes):
+- Metode ini mengkodekan teks dengan mengganti setiap karakter dengan kode Huffman yang sesuai. 
+  Hasil kompresi berupa string yang tersusun dari kode-kode Huffman.
+6. 'decompress(String compressed, Map<Character, String> huffmanCodes):
+- Metode ini mendekompresi data yang dikompresi sebelumnya. 
+  Ia menggunakan peta 'huffmanCodes' untuk mencocokkan kode Huffman terkompresi dengan karakter yang sesuai. 
+7. 'main(String[] args):
+- Ini adalah metode "utama" yang digunakan untuk latihan. 
+  Dibutuhkan sampel teks, menghasilkan kode Huffman untuk teks tersebut, mengompresi teks, dan mendekompresi hasil kompresi. 
+  Hasilnya dicetak di layar. Program ini digunakan untuk menunjukkan bagaimana menggunakan algoritma Huffman untuk mengompresi dan mendekompresi data. 
+  Hal ini dapat berguna untuk memperkecil ukuran data saat menyimpan atau mentransfer data.
